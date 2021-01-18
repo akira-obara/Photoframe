@@ -16,7 +16,7 @@ def sync():
         config.read("setting.ini")
         PATH = str(config.items("IMAGE_DIRECTORY")[0][1])
         file_list = os.listdir(PATH)
-        gfile_list = drive.ListFile({'q': "'1gT2rhFcZ1faKetJ3MNonh-XEK6ia1ZCX' in parents and trashed=false"}).GetList()
+        gfile_list = drive.ListFile({'q': "'' in parents and trashed=false"}).GetList()
         base = os.path.dirname(os.path.abspath(__file__))
         name = os.path.normpath(os.path.join(base))
         for file1 in gfile_list:
